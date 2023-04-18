@@ -14,7 +14,7 @@
 pip install -U stopwords-zh
 ```
 
-# [Docs](https://jie-yuan.github.io/stopwords-zh/)
+# [Docs](https://yuanjie-ai.github.io/stopwords-zh/)
 
 # Usages
 ```
