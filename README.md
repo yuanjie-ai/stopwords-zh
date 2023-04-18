@@ -20,10 +20,12 @@ from stopwords import stopwords
 
 print(stopwords())
 ```
+### 欢迎提交更新，共建中文停用词库
 
 ---
 # TODO
 
 - [x] 停用词
 - [ ] 情感字典
+
 
