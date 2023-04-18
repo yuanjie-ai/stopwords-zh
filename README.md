@@ -19,8 +19,11 @@ pip install -U stopwords-zh
 # Usages
 ```
 from stopwords import stopwords
+import jieba
 
-print(stopwords())
+STOP_WORDS = stopwords()
+words = jieba.cut('欢迎提交更新，共建中文停用词库')
+print([w for w in words if w not in STOP_WORDS])
 ```
 
 ---
