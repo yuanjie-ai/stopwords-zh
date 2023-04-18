@@ -7,6 +7,8 @@
 <h1 align = "center">🔥stopwords-zh🔥</h1>
 
 ---
+### 欢迎提交更新，共建中文停用词库
+
 # Install
 ```python
 pip install -U stopwords-zh
@@ -20,7 +22,6 @@ from stopwords import stopwords
 
 print(stopwords())
 ```
-### 欢迎提交更新，共建中文停用词库
 
 ---
 # TODO
