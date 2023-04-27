@@ -10,7 +10,7 @@
 ### 欢迎提交更新，共建中文停用词库
 
 # Install
-```python
+```shell
 pip install -U stopwords-zh
 ```
 
@@ -26,13 +26,12 @@ pip install -U stopwords-zh
   - marimo: Marimo multi-lingual stopwords collection 内的中文停用词
   - iso: Stopwords ISO 内的中文停用词
   - all: 上述所有停用词并集
-```
-from stopwords import stopwords
+```python
 import jieba
+from stopwords import stopwords, filter_stopwords
 
-STOP_WORDS = stopwords(source='all')
-words = jieba.cut('欢迎提交更新，共建中文停用词库')
-print([w for w in words if w not in STOP_WORDS])
+print(filter_stopwords(jieba.cut('欢迎提交更新，共建中文停用词库')))
+
 ```
 
 ---

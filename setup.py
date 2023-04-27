@@ -42,7 +42,7 @@ setup(
     long_description_content_type="text/markdown",
     include_package_data=True,
     keywords='stopwords-zh',
-    name='stopwords',
+    name='stopwords-zh',
     packages=find_packages(include=['stopwords', 'stopwords.*']),
 
     test_suite='tests',

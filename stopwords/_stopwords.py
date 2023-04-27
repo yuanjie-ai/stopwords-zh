@@ -1,9 +1,11 @@
 """Main module."""
+from functools import lru_cache
 from pathlib import Path
 
 get_resolve_path = lambda path, file=__file__: (Path(file).parent / Path(path)).resolve()
 
 
+@lru_cache()
 def stopwords(source="all"):
     """
     Params:
@@ -27,5 +29,12 @@ def stopwords(source="all"):
     return set(get_resolve_path(f"./data/stopwords.zh.{source}.txt").read_text().strip().split())
 
 
+def filter_stopwords(words, source='all'):
+    sw = stopwords(source)
+    return [w for w in words if w not in sw]
+
+
 if __name__ == '__main__':
-    print(stopwords())
+    import jieba
+
+    print(filter_stopwords(jieba.cut('欢迎提交更新，共建中文停用词库')))
