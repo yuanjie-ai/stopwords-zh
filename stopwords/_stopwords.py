@@ -26,7 +26,7 @@ def stopwords(source="all"):
     supported_source = ["cn", "baidu", "hit", "scu", "marimo", "ict", "iso", "all"]
     if source not in supported_source:
         raise NotImplementedError("请求了未知来源，请使用`help(stopwords)`查看支持的来源")
-    return set(get_resolve_path(f"./data/stopwords.zh.{source}.txt").read_text().strip().split())
+    return set(get_resolve_path(f"./data/stopwords.zh.{source}.txt").read_text(encoding='utf8').strip().split())
 
 
 def filter_stopwords(words, source='all'):
