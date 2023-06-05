@@ -19,11 +19,12 @@ def stopwords(source="all"):
           - marimo: Marimo multi-lingual stopwords collection 内的中文停用词
           - iso: Stopwords ISO 内的中文停用词
           - all: 上述所有停用词并集
+          - en: 英文
     Return:
         a set, 停用词表集合
     """
 
-    supported_source = ["cn", "baidu", "hit", "scu", "marimo", "ict", "iso", "all"]
+    supported_source = ["cn", "baidu", "hit", "scu", "marimo", "ict", "iso", "all", 'en']
     if source not in supported_source:
         raise NotImplementedError("请求了未知来源，请使用`help(stopwords)`查看支持的来源")
     return set(get_resolve_path(f"./data/stopwords.zh.{source}.txt").read_text(encoding='utf8').strip().split())
