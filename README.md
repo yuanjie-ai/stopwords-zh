@@ -26,6 +26,7 @@ pip install -U stopwords-zh
   - marimo: Marimo multi-lingual stopwords collection 内的中文停用词
   - iso: Stopwords ISO 内的中文停用词
   - all: 上述所有停用词并集
+  - en：nltk中的英文停用词
 ```python
 import jieba
 from stopwords import stopwords, filter_stopwords
